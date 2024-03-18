@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");
+
+/* reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+/* common style */
+.wrap {
+  font-size: 15px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.hide {
+  display: none !important;
+}
+* {
+  box-sizing: border-box;
+}
+/* 헤더 */
+header {
+  /* background: orange; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 20px;
+  /* opacity: 0; */
+  /* 상단에 고정시키고 포지션을 하면 가로 100%이 깨지게 되므로 설정 */
+}
+
+header > .inner-header {
+  /* background: tomato; */
+  display: flex;
+  width: 92%;
+  margin: 0px auto;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: 700;
+  align-items: center;
+}
+header > .inner-header .logo {
+  /* border: 3px solid blue; */
+  flex: 1;
+}
+header > .inner-header .logo img {
+  height: 60px;
+}
+header > .inner-header .intro-text {
+  /* border: 3px solid greenyellow; */
+  flex: 4;
+  margin-left: 40px;
+  text-transform: uppercase;
+}
+
+header > .inner-header .menu-open {
+  /* border: 3px solid violet; */
+  flex: 1;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header > .inner-header .menu-open .lnr-menu {
+  font-size: 33px;
+  margin-left: 15px;
+}
+
+header .gnb {
+  background: #000;
+  color: #666;
+  font-size: 40px;
+  padding: 70px 100px;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  display: flex;
+  transition: 0.6s;
+}
+header .gnb .close {
+  display: block;
+  color: #fff;
+  order: 1;
+}
+header .gnb ul {
+  margin-right: 200px;
+}
+header .gnb ul li {
+  font-weight: 700;
+  line-height: 1.7;
+}
+header .gnb ul li:hover,
+header .gnb ul li.active {
+  color: #fff;
+}
+
+/* section visual style */
+section.visual .slide li {
+  /* border: 4px solid blue; */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+section.visual .slide li img {
+  width: 100%;
+  position: absolute;
+  top: -50px;
+}
+section.visual .slide li .txt {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+section.visual .slide li .txt h3 {
+  margin: 30px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+section.visual .slide li .scroll {
+  /* background: orange; */
+  position: absolute;
+  left: 50px;
+  bottom: 10%;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ccc;
+  transform: rotate(-90deg);
+}
+/* 헤더 끝 */
+
+/* section start */
+section.contents {
+  background: #1b1b1b;
+  color: #fff;
+  padding: 120px 0;
+}
+section.contents .main-text {
+  /* background: orange; */
+  width: 80%;
+  margin: 0 auto 100px;
+  font-size: 25px;
+  display: flex;
+  position: relative;
+  /* justify-content: space-between; */
+}
+section.contents .main-text::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ffec03;
+  position: absolute;
+  left: 70px;
+  top: 100px;
+}
+section.contents .main-text::after {
+  content: "”";
+  font-size: 300px;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+}
+section.contents .main-text h3 {
+  /* border: 3px solid red; */
+  font-weight: 700;
+  flex: 1;
+}
+section.contents .main-text p {
+  /* border: 3px solid blue; */
+  line-height: 1.4;
+  font-size: 23px;
+  flex: 2;
+}
+section.contents .main-text p span {
+  display: block;
+  margin-top: 30px;
+  color: #999;
+  font-size: 20px;
+}
+/* .partner */
+section.contents .partner {
+  /* background: orange; */
+  width: 80%;
+  margin: 170px auto 100px;
+}
+section.contents .partner h3 {
+  font-size: 17px;
+  margin-bottom: 80px;
+  font-weight: 600;
+}
+
+section.contents .partner ul {
+  /* background: red; */
+  display: flex;
+  flex-wrap: wrap;
+}
+section.contents .partner ul li {
+  /* border: 4px solid #fff; */
+  width: 25%;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.contents .partner ul li img {
+  opacity: 0.3;
+  transition: 0.4s;
+}
+section.contents .partner ul li img:hover {
+  opacity: 1;
+}
+/* met project start */
+
+section.contents .project .top {
+  /* background: blue; */
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+section.contents .project .top h3 {
+  /* border: 4px solid orange; */
+  flex: 9;
+  font-weight: 700;
+  color: #fff;
+  font-size: 35px;
+}
+section.contents .project .top a {
+  /* border: 4px solid yellow; */
+  flex: 1;
+  font-size: 15px;
+  color: #fff;
+}
+section.contents .project .animate {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+section.contents .project .animate li {
+  /* background: blue; */
+  border: 3px solid rgb(255, 255, 255);
+  display: flex;
+  flex: 1;
+  width: 25%;
+  margin: 5px;
+  margin-top: 80px;
+}
+section.contents .project .animate li a img {
+  width: 100%;
+}
+section.contents .project .animate li a {
+  overflow: hidden;
+  position: relative;
+}
+section.contents .project .animate li a .name {
+  background: #000;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 280px;
+  height: 70px;
+  color: #fff;
+  text-align: end;
+  padding-top: 15px;
+  padding: 15px;
+  opacity: 0;
+}
+section.contents .project ul li a::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.9);
+  position: absolute;
+  transition: 0.6s;
+}
+section.contents .project ul li a:hover::before {
+  width: 100%;
+}
+section.contents .project ul li a:hover .name {
+  animation: show-name 1s forwards;
+}
+
+@keyframes show-name {
+  from {
+    opacity: 0;
+    bottom: -30px;
+  }
+  to {
+    opacity: 1;
+    bottom: 10px;
+  }
+}
+section.contents .inner {
+  background: url(../img/contact.jpg) no-repeat center/cover;
+  width: 80%;
+  margin: 0 auto;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 160px;
+  /* margin-top: 30px; */
+}
+section.contents .inner h3 {
+  font-weight: 400;
+  font-size: 12px;
+}
+section.contents .inner .tel {
+  font-weight: 700;
+  font-size: 45px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+section.contents .inner p {
+  font-weight: 400;
+  font-size: 12px;
+}
+footer {
+  background: #1b1b1b;
+  padding: 0 80px 80px;
+}
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  color: gray;
+  align-content: center;
+}
+footer ul li:nth-child(2) {
+  color: #eee;
+  font-size: 16px;
+  line-height: 2;
+  /* padding-bottom: 150px; */
+  /* border: 1px solid blue; */
+}
+footer ul li:nth-child(2) span {
+  font-weight: 700;
+  margin-right: 10px;
+  color: #999;
+}
+footer .go-top {
+  color: #fff;
+  font-size: 50px;
+  position: fixed;
+  right: 50px;
+  bottom: 60px;
+}
